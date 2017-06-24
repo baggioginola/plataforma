@@ -1,0 +1,253 @@
+/**********Search form**********/
+#search-form{
+	position:relative;
+	vertical-align:top;
+	float:right;
+	width:192px;
+	padding-top:9px;
+	padding-right:9px;
+}
+	#search-form fieldset {
+		border:none;
+		padding:0;
+		width:192px;
+		height:28px;
+		overflow:hidden;
+		background:url(../imagenes/search-form-bg.png) 0 0 no-repeat;
+	}
+		#search-form label {display:block; float:left;}
+		#search-form input{
+			background:none;
+			border:none;
+			color:#5d5d5d;
+			font: 12px/16px Arial, Helvetica, sans-serif;
+			margin:0;
+			padding:7px 10px 5px;
+			outline:none;
+			width:134px;
+		}
+	#search-form a{
+		float:right;
+		display:block;
+		width:38px;
+		height:28px;
+		overflow:hidden;
+		background:#3e3e3e;
+		text-decoration:none;
+		background: url(../imagenes/search-button-bg.gif) center 6px no-repeat;
+		cursor:pointer;
+	}
+	
+	#search-form button{
+		float:right;
+		display:block;
+		width:38px;
+		height:28px;
+		overflow:hidden;
+		background:#3e3e3e;
+		text-decoration:none;
+		background: url(../imagenes/search-button-bg.gif) center 6px no-repeat;
+		cursor:pointer;
+	}
+		#search-form a:hover{background-position:center -22px;}
+
+	#search-form button:hover{background-position:center -22px;}
+
+/**********User login form**********/
+#user-login-form{
+	position:relative;
+	vertical-align:top;
+	background:#fefefe;
+	border:1px solid #f3f3f3;
+	width:auto;
+	padding:28px 19px 17px 16px;
+	font:12px/15px Arial, Helvetica, sans-serif;
+	color:#7a7a7a;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+}
+	#user-login-form h3{
+		font-size:21px;
+		line-height:26px;
+		color:#444;
+		letter-spacing:-1px;
+	}
+	#user-login-form fieldset {border:none; padding:0; width:100%; overflow:hidden;}
+		#user-login-form label {display:block; overflow:hidden; color:#585858; padding-bottom:5px;}
+			
+			#user-login-form label span{
+				display:inline-block;
+				width:68px;
+				padding-top:6px;
+				overflow:hidden;
+			}
+		#user-login-form input{
+			background:#fefefe;
+			border:1px solid #dcdcdc;
+			color:#585858;
+			font: 12px/15px Arial, Helvetica, sans-serif;
+			margin:0;
+			padding:5px 10px 6px;
+			outline:none;
+			width:220px;
+			border-radius:4px;
+			-moz-border-radius:4px;
+			-webkit-border-radius:4px;
+		}
+		#user-login-form label.remember{float:left; padding-top:12px;}
+			#user-login-form .remember input{padding:0; margin-right:4px; width:auto;}
+			#user-login-form .remember span{width:auto; padding-top:0; color:#2baccc; margin-top:-2px;}
+	#user-login-form .button{
+		float:right;
+		display:inline-block;
+		background: url(../imagenes/login-button-tail.gif) center top repeat-x #2a86b0;
+		color:#fff;
+		border:none;
+		padding:7px 28px 8px;
+	}
+		#user-login-form .button:hover{color:#444; background-position:center -33px; background-color:#e9e9e9;}
+	#user-login-form .link-1{text-decoration:none; color:#2baccc;}
+		#user-login-form .link-1:hover{text-decoration:underline;}
+	#user-login-form .link-2{color:#d10f0f;}
+	#user-login-form fieldset > span{display:inline-block; width:93px;}
+
+/**********Subscribe form**********/
+#subs-form{
+	position:relative;
+	vertical-align:top;
+	width:340px;
+	font-size:14px;
+	line-height:17px;
+}
+	#subs-form fieldset {border:none;padding:0; width:100%; overflow:hidden;}
+		#subs-form label {display:block; float:left;}
+		#subs-form input{
+			background:#fff;
+			border:none;
+			border-top:1px solid #bababa;
+			border-left:1px solid #bababa;
+			color:#444;
+			font:12px/16px Arial, Helvetica, sans-serif;
+			margin:0;
+			padding:8px 10px;
+			outline:none;
+			width:218px;
+			border-radius:9px;
+			-moz-border-radius:9px;
+			-webkit-border-radius:9px;
+		}
+	#subs-form .button{
+		float:right;
+		display:inline-block;
+		background:#1c1c1c;
+		font:18px/22px Arial, Helvetica, sans-serif;
+		color:#f6f6f6;
+		text-transform:lowercase;
+		text-decoration:none;
+		padding:3px 8px 6px;
+		cursor:pointer;
+		border:none;
+		border-radius:9px;
+		-moz-border-radius:9px;
+		-webkit-border-radius:9px;
+	}
+		#subs-form .button:hover{background:#40a2c5;}
+
+/***** contact form *****/
+#contact-form {
+	position:relative;
+	vertical-align:top;
+	width:100%;
+	z-index:1;
+}
+	#contact-form fieldset {border:none;padding:0; width:100%; overflow:hidden;}
+			#contact-form label {display:block; min-height:34px; position:relative;}
+			#contact-form .message{min-height:244px;}
+			#contact-form input, #contact-form textarea {
+				padding:6px 13px 6px;
+				margin:0;
+				font:12px/15px Arial, Helvetica, sans-serif;
+				color:#a6a6a6;
+				background:#f6f4f4;
+				outline:none;
+				border:none;
+				border-top:1px solid #bcbbbb;
+				border-left:1px solid #bcbbbb;
+				width:255px;
+				border-radius:13px;
+				-moz-border-radius:13px;
+				-webkit-border-radius:13px;
+				box-shadow:inset 1px 1px 0 #e2e1e1;
+			}
+			#contact-form .area .error {float:none;}
+			#contact-form textarea {
+				padding-top:8px;
+				width:373px;
+				height:218px;
+				overflow:auto;
+				resize:none;
+			}
+			#contact-form .success {display:none; margin-bottom:20px;}
+			#contact-form .error,
+			#contact-form .empty {
+				color:#d10f0f;
+				font-size:11px;
+				line-height:1.27em;
+				display:none;
+				overflow:hidden;
+				margin-bottom:5px;
+			}
+.buttons-wrapper{text-align:right; position:relative;}
+.buttons-wrapper a {cursor:pointer; margin-left:8px;}
+	.buttons-wrapper a:first-child{margin-left:0px;}
+
+@media only screen and (max-width: 995px) {
+	/**********Search form**********/
+	#search-form{position:absolute; top:-1px; left:15px; float:none; padding-top:0px; padding-right:0px;}
+	#search-form label{padding:0 0 0 10px;}
+	#search-form input{padding:7px 0px 5px;}
+	/**********User login form**********/
+	#user-login-form{padding:15px 19px 17px 16px;}
+	#user-login-form h3{margin-bottom:10px !important;}
+	#user-login-form .login, #user-login-form .password{height:55px;}
+	#user-login-form label span{display:block; width:auto; padding-top:0px; margin-bottom:3px;}
+	#user-login-form input{width:160px;}
+	#user-login-form label.remember{float:none; padding-top:0px; height:22px;}
+	#user-login-form .remember span{display:inline-block;}
+	#user-login-form .button{float:none; display:block; text-align:center;}
+	#user-login-form fieldset > span{display:block; width:auto;}
+	/**********Subscribe form**********/
+	#subs-form{width:316px;}
+	#subs-form input{width:192px;}
+	/***** contact form *****/
+	#contact-form input, #contact-form textarea{width:289px;}
+}
+@media only screen and (max-width: 767px){
+	/**********Search form**********/
+	#search-form{position:static; margin:0 auto;}
+	/**********User login form**********/
+	#user-login-form .login{float:left;}
+	#user-login-form .password{float:right;}
+	#user-login-form label.remember{float:left; padding-top:6px; height: auto;}
+	#user-login-form .button{float:right; display:inline-block; padding: 7px 32px 8px;}
+	#user-login-form fieldset > span{display:inline-block; width:93px;}
+	/**********Subscribe form**********/
+	#subs-form{width:340px;}
+	#subs-form input{width:218px;}
+	/***** contact form *****/
+	#contact-form input{width:255px;}
+	#contact-form textarea{width:393px;}
+}
+@media only screen and (max-width: 479px){
+	/**********User login form**********/
+	#user-login-form .login, #user-login-form .password{height:35px;}
+	#user-login-form label span{display:inline-block; width:70px; padding-top:6px; margin-bottom:0px;}
+	#user-login-form input{width:168px;}
+	#user-login-form .login, #user-login-form .password{float:none;}
+	/**********Subscribe form**********/
+	#subs-form{width:300px;}
+	#subs-form input{width:177px;}
+	/***** contact form *****/
+	#contact-form input, #contact-form textarea{width:273px;}
+}
