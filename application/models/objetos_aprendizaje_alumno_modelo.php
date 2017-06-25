@@ -18,7 +18,8 @@ class Objetos_aprendizaje_alumno_modelo extends CI_Model
     {
         $sql = "SELECT id_objeto_aprendizaje, objeto_aprendizaje.nombre,objeto_aprendizaje.tipo,
                   objeto_aprendizaje.id_maestro,objeto_aprendizaje.id_curso,objeto_aprendizaje.status,
-                  curso.nombre as curso
+                  curso.nombre as curso,
+                  path
                   FROM objeto_aprendizaje
                   INNER JOIN curso
                   ON objeto_aprendizaje.id_curso = curso.id_curso

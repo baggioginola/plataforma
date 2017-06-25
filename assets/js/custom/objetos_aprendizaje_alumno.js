@@ -5,39 +5,50 @@ $(document).ready(function () {
     var url = BASE_ROOT + '?c=objetos_aprendizaje_alumno&m=getAll';
     var columns = [{data: 'curso'}, {data: 'nombre'}, {data: 'tipo'}];
 
-    var table = masterDatatable(url, columns);
+    var table = Datatable(url, columns);
 
     $('#datatable tbody').on('click', '#btn_edit', function () {
 
-        var id = table.row($(this).parents('tr')).data().id_objeto_aprendizaje;
-        var sello = table.row($(this).parents('tr')).data().sello;
+        var path = table.row($(this).parents('tr')).data().path;
 
-        location.href = BASE_ROOT + "?c=objetos_aprendizaje&m=editar&id=" + id + "&sello=" + sello;
+        //location.href = BASE_ROOT + path;
 
-        return false;
-    });
+        window.open(
+            BASE_ROOT + path,
+            '_blank'
+        );
 
-    $('#datatable tbody').on('click', '#btn_delete', function () {
-        var id = table.row($(this).parents('tr')).data().id_objeto_aprendizaje;
-        var sello = table.row($(this).parents('tr')).data().sello;
 
-        bootbox.confirm("Eliminar elemento?", function (result) {
-            if (result == true) {
-                window.location.href = BASE_ROOT + "?c=objetos_aprendizaje&m=eliminar&id=" + id + "&sello=" + sello;
-            }
-        });
         return false;
     });
 });
 
+function Datatable(url, columns) {
+    var defaultContentEdit = "<button class='btn btn-primary btn-xs' id='btn_edit'><span class='glyphicon glyphicon-download'></span></button>";
 
-//////////////////////////////////////////////////////////////////
+    var columnsDefault = [{"orderable": false, "data": null, "defaultContent": defaultContentEdit}];
 
+    columns = columns.concat(columnsDefault);
 
-function eliminar_registro(id, sello) {
-    var answer = confirm('Esta seguro que quiere eliminar el objeto de aprendizaje?');
-    if (answer) {
-        window.location.href = "<?php echo site_url()?>?c=objetos_aprendizaje&m=eliminar&id=" + id + "&sello=" + sello;
-    }
-    else return false;
+    var dataTable = $('#datatable').DataTable({
+        ajax: {
+            type: 'POST',
+            url: url,
+            dataSrc: ''
+        },
+        columns: columns,
+        /*select: {
+         style: 'os'
+         },
+         */
+        language: {
+            "lengthMenu": "Mostrando _MENU_ elementos por pagina",
+            "zeroRecords": "No se ha encontrado",
+            "info": "Mostrando _PAGE_ de _PAGES_",
+            "infoEmpty": "No hay datos disponibles",
+            "infoFiltered": "(filtered from _MAX_ total records)"
+        },
+        "lengthMenu": [[25, 50, 100, -1], [25, 50, 100, "All"]]
+    });
+    return (dataTable);
 }

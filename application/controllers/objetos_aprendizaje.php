@@ -135,8 +135,7 @@ class Objetos_aprendizaje extends CI_Controller
         if (!$this->Seguridad_modelo->verificar_token($token)) {
             echo json_encode($this->getResponse(STATUS_FAILURE_INTERNAL, "No puedes editar el objeto de aprendizaje"));
             return;
-        }
-        else{
+        } else {
             $this->Seguridad_modelo->generar_token();
 
             $this->parameters['fecha_modifica'] = date('Y-m-d');
@@ -209,8 +208,6 @@ class Objetos_aprendizaje extends CI_Controller
 
         $config['file_ext'] = $ext;
 
-        //$config['file_ext']			= ".xls";
-
         $this->load->library('upload', $config);
 
         if (!$this->upload->do_upload($fileElementName)) {
@@ -236,6 +233,8 @@ class Objetos_aprendizaje extends CI_Controller
             } else if ($ext == '.xlsx' || $ext == '.XLSX') {
                 $info['tipo'] = '.xlsx';
             }
+
+            $info['path'] = $config['upload_path'] . '/' . $config['file_name'];
 
             $this->objetos_aprendizaje_modelo->editar($id, $info);
 

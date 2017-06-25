@@ -31,6 +31,7 @@ CREATE TABLE curso_alumno(id_curso_alumno INT(11) NOT NULL AUTO_INCREMENT PRIMAR
 FOREIGN KEY(id_curso) REFERENCES curso(id_curso), FOREIGN KEY(id_alumno) REFERENCES alumno(id_alumno));
 
 CREATE TABLE objeto_aprendizaje_alumno(id_objeto_aprendizaje_alumno INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,id_objeto_aprendizaje INT(11) NOT NULL, id_alumno INT(11) NOT NULL,
+path varchar(200),
 FOREIGN KEY(id_objeto_aprendizaje) REFERENCES objeto_aprendizaje(id_objeto_aprendizaje), FOREIGN KEY(id_alumno) REFERENCES alumno(id_alumno));
 
 CREATE TABLE maestro_alumno(id_maestro_alumno INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,id_maestro INT(11) NOT NULL, id_alumno INT(11) NOT NULL,

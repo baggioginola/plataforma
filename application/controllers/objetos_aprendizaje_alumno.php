@@ -16,8 +16,6 @@ define('MESSAGE_ERROR', 'La transaccion fue fallida, intente mas tarde');
 
 class Objetos_aprendizaje_alumno extends CI_Controller
 {
-    private $parameters = array();
-
     public function __construct()
     {
         parent::__construct();
@@ -49,22 +47,6 @@ class Objetos_aprendizaje_alumno extends CI_Controller
         }
 
         echo json_encode($this->UTF8Converter($result));
-    }
-
-    /**
-     * @return bool
-     */
-    private function _setParameters()
-    {
-        if (!isset($_POST) || empty($_POST)) {
-            return false;
-        }
-
-        foreach ($_POST as $key => $value) {
-            $this->parameters[$key] = utf8_decode($value);
-        }
-
-        return true;
     }
 
     public function UTF8Converter($array)

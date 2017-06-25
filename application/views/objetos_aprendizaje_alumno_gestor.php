@@ -45,18 +45,6 @@
                                     Aprendizaje</h1>
                             </div>
 
-                            <div style="float:right;  margin-right:50px; clear: both;">
-
-                                <a href="<?php echo site_url() . "?c=objetos_aprendizaje&m=agregar" ?>"
-                                   style="text-decoration:none; color:#000000; ">
-
-                                    <img border="0" align="absmiddle" hspace="2"
-                                         src="<?php echo base_url() . "assets/imagenes/archivo.png" ?>"
-                                         style="width:25px">
-                                    <br/>
-                                    Agregar Objeto Aprendizaje</a>
-                            </div>
-
                             <div style="clear: both"><br></div>
                             <table id="datatable" class="table table-striped table-bordered" cellspacing="0"
                                    width="100%">
@@ -65,7 +53,6 @@
                                     <th>Curso</th>
                                     <th>Nombre</th>
                                     <th>Tipo</th>
-                                    <th></th>
                                     <th></th>
                                 </tr>
                                 </thead>
