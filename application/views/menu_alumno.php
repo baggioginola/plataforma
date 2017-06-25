@@ -19,13 +19,13 @@
 
 
         <li <?php
-        if ($pagina == 'objetos_aprendizaje_gestor' || $pagina == 'objetos_aprendizaje_agregar' || $pagina == 'objetos_aprendizaje_editar') {
+        if ($pagina == 'objetos_aprendizaje_alumno_gestor') {
             ?>
             class="current"
         <?php
         }
         ?>>
-            <a href="<?php echo site_url() . "?c=objetos_aprendizaje" ?>">Objetos Aprendizaje</a></li>
+            <a href="<?php echo site_url() . "?c=objetos_aprendizaje_alumno" ?>">Objetos Aprendizaje</a></li>
 
 
         <li class="last-item"><a href="#">Informaci&oacute;n Personal</a></li>
