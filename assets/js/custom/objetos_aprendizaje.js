@@ -1,10 +1,9 @@
 /**
  * Created by mario on 22/jun/2017.
  */
-$(document).ready(function()
-{
+$(document).ready(function () {
     var url = BASE_ROOT + '?c=objetos_aprendizaje&m=getAll';
-    var columns = [{data: 'nombre'}, {data: 'tipo'}];
+    var columns = [{data: 'curso'}, {data: 'nombre'}, {data: 'tipo'}];
 
     var table = masterDatatable(url, columns);
 
@@ -32,17 +31,13 @@ $(document).ready(function()
 });
 
 
-
-
 //////////////////////////////////////////////////////////////////
 
 
-function eliminar_registro(id,sello)
-{
+function eliminar_registro(id, sello) {
     var answer = confirm('Esta seguro que quiere eliminar el objeto de aprendizaje?');
-    if(answer)
-    {
-        window.location.href="<?php echo site_url()?>?c=objetos_aprendizaje&m=eliminar&id="+id+"&sello="+sello;
+    if (answer) {
+        window.location.href = "<?php echo site_url()?>?c=objetos_aprendizaje&m=eliminar&id=" + id + "&sello=" + sello;
     }
     else return false;
 }

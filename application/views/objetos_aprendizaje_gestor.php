@@ -62,6 +62,7 @@
                                    width="100%">
                                 <thead>
                                 <tr>
+                                    <th>Curso</th>
                                     <th>Nombre</th>
                                     <th>Tipo</th>
                                     <th></th>
