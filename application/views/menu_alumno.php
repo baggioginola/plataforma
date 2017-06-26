@@ -28,7 +28,13 @@
             <a href="<?php echo site_url() . "?c=objetos_aprendizaje_alumno" ?>">Objetos Aprendizaje</a></li>
 
 
-        <li class="last-item"><a href="#">Informaci&oacute;n Personal</a></li>
+        <li <?php
+        if ($pagina == 'alumno') {
+        ?>
+            class="current"
+            <?php
+            }
+            ?> ><a href="<?php echo site_url() . "?c=alumno" ?>">Informaci&oacute;n Personal</a></li>
 
     </ul>
 </nav>
