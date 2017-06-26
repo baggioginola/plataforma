@@ -138,7 +138,7 @@
                                             <div class="col-lg-12">
                                                 <input type="text" class="form-control" id="id_captcha" required
                                                        placeholder="Ingrese letras"
-                                                       autocomplete="off">
+                                                       autocomplete="off" data-match="#id_captcha_value" data-match-error="Whoops, these don't match">
                                                 <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
 
                                             </div>
@@ -151,6 +151,7 @@
                                                 </button>
                                             </div>
                                         </div>
+                                        <input type="hidden" value="<?php echo $captcha['word']; ?>"  id="id_captcha_value">
                                     </form>
 
                                 </div>
