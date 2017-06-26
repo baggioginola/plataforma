@@ -6,14 +6,6 @@
  * Time: 20:23
  */
 
-#Response codes
-define('STATUS_SUCCESS', 200);
-define('STATUS_FAILURE_CLIENT', 404);
-define('STATUS_FAILURE_INTERNAL', 500);
-
-define('MESSAGE_SUCCESS', 'La transaccion fue exitosa');
-define('MESSAGE_ERROR', 'La transaccion fue fallida, intente mas tarde');
-
 class Objetos_aprendizaje_alumno extends CI_Controller
 {
     public function __construct()

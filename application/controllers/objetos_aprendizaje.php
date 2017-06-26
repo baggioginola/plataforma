@@ -1,13 +1,5 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-#Response codes
-define('STATUS_SUCCESS', 200);
-define('STATUS_FAILURE_CLIENT', 404);
-define('STATUS_FAILURE_INTERNAL', 500);
-
-define('MESSAGE_SUCCESS', 'La transaccion fue exitosa');
-define('MESSAGE_ERROR', 'La transaccion fue fallida, intente mas tarde');
-
 class Objetos_aprendizaje extends CI_Controller
 {
     private $parameters = array();
@@ -28,7 +20,6 @@ class Objetos_aprendizaje extends CI_Controller
 
     public function index()
     {
-
         if ($_SESSION['tipo'] == 'maestro') {
             $data['menu'] = 'menu';
         } else if ($_SESSION['tipo'] == 'alumno') {
