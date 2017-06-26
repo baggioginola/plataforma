@@ -123,6 +123,7 @@ class Cursos extends CI_Controller
             echo json_encode($this->getResponse(STATUS_FAILURE_INTERNAL, "No puedes editar el curso"));
             return;
         } else {
+            $this->Seguridad_modelo->generar_token();
             $this->parameters['fecha_modifica'] = date('Y-m-d');
 
             $id = $this->parameters['id_oculto'];

@@ -121,6 +121,7 @@ class Maestros extends CI_Controller
             echo json_encode($this->getResponse(STATUS_FAILURE_INTERNAL, "No puedes editar el maestro"));
             return;
         } else {
+            $this->Seguridad_modelo->generar_token();
             $password = $this->parameters['password_oculto'];
 
             if ($password != $this->parameters['password']) {

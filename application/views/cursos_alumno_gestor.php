@@ -63,7 +63,6 @@
                                     <th>Maestro</th>
                                     <th>Curso</th>
                                     <th></th>
-                                    <th></th>
                                 </tr>
                                 </thead>
                             </table>

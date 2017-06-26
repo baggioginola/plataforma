@@ -29,15 +29,3 @@ $(document).ready(function () {
         return false;
     });
 });
-
-
-//////////////////////////////////////////////////////////////////
-
-
-function eliminar_registro(id, sello) {
-    var answer = confirm('Esta seguro que quiere eliminar el objeto de aprendizaje?');
-    if (answer) {
-        window.location.href = "<?php echo site_url()?>?c=objetos_aprendizaje&m=eliminar&id=" + id + "&sello=" + sello;
-    }
-    else return false;
-}
